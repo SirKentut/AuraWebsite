@@ -53,6 +53,8 @@ li,a{
 
 .nav_content li a{
     transition:all 0.3s ease 0s;
+    background-clip: text;
+-webkit-background-clip: text;
 }
 
 
@@ -78,7 +80,7 @@ li,a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px 20px;
     border-radius: 50px;
     position: relative;
     height: 40px;
@@ -231,6 +233,21 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: center;
     grid-gap: 100px 50px;
+}
+
+.team-col img{
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+}
+
+.team-col .role:hover{
+    animation: color-rotate 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-clip: text;
+-webkit-background-clip: text;
+    
 }
 
 
