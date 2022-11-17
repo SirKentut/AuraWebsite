@@ -42,14 +42,17 @@ li,a{
     cursor: pointer;
 }
 
+.logo h1{
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
 
 .nav_content li a{
     transition:all 0.3s ease 0s;
 }
 
-.nav_content li a:hover{
-    color: rgb(178, 112, 239);
-}
+
 
 
 
@@ -59,7 +62,7 @@ li,a{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     justify-content: center;
-    padding: 200px 5%;
+    padding: 250px 5%;
     grid-gap: 30px;
     color:#c5d0dc;
 }
@@ -78,8 +81,9 @@ li,a{
     padding: 10px 20px;
 }
 button{
-    transition:all 0.3s ease 0s;
+    transition:all 0.5s ease 0s;
     color: white;
+    font-size: 12px;
     background-color: rgb(173, 95, 246);
 }
 button:hover{
@@ -105,3 +109,21 @@ body::-webkit-scrollbar {
     background-color:rgb(178, 112, 239);
     border-radius:10px;
   }
+
+  @keyframes color-rotate{
+    from{
+        filter: hue-rotate(0deg);
+        color:rgb(173, 95, 246);
+    }
+    to{
+        filter: hue-rotate(360deg);
+        color:rgb(178, 112, 239);
+    }
+  }
+
+  .nav_content li a:hover{
+    animation: color-rotate 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
