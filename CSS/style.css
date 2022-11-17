@@ -1,10 +1,28 @@
 *{
     padding:0;
     margin:0;
-    background-color:#0d1b2a;
     
+
 }
 
+body{
+    background-color:#0d1b2a;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+      --bg-color: #292639;
+      --text-color: #ebeaf7;
+      --switch-color:rgb(173, 95, 246);
+      --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
+    }
+    .light body {
+      --bg-color: #fff;
+      --text-color: #303030;
+      --switch-color:#292639;
+      --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1) inset;
+    }
+  }
 .container{
     box-sizing: border-box;
 }
@@ -96,12 +114,11 @@ li,a{
   }
   
   .theme-switch .ball {
+    transition:all 0.5s ease 0s;
     transition: var(--transition);
-    background-color: var(--text-color);
+    background-color: var( --switch-color);
     position: absolute;
     border-radius: 50%;
-    top: 5px;
-    left: 5px;
     height: 30px;
     width: 30px;
    }
@@ -121,16 +138,16 @@ li,a{
   }
   
   .theme-switch .ball {
-    transform: translatex(0);
+    transform: translatex(-0);
   }
   
   .dark .theme-switch .ball {
-    transform: translatex(40px);
+    transform: translatex(55px);
   }
   
   @media (prefers-color-scheme: dark) {
     .theme-switch .ball {
-      transform: translatex(40px);
+      transform: translatex(55px);
     }
   
     .light .theme-switch .ball {
