@@ -23,16 +23,18 @@ li,a{
     list-style: none;
 }
 
-.nav_content{
+.nav_content li{
     display:inline-block;
-    padding: 0px 20px;
+    padding: 0px 10px;
+    margin: 0px 15px;
 }
+
 
 .navbar{
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 10%;
+    padding: 10px 5%;
 }
 
 .logo{
@@ -53,11 +55,53 @@ li,a{
 
 
 .row{
-    display:flex;
-    height: 88%;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
     align-items: center;
+    justify-content: center;
+    padding: 200px 5%;
+    grid-gap: 30px;
+    color:#c5d0dc;
 }
 
-.col{
+.column1{
     flex-basis: 50%;
+    justify-content: center;
 }
+.btn_section{
+    padding-top: 1rem;
+}
+
+.btn_section button{
+    margin: 5px 10px;
+    border-radius: 100px;
+    padding: 10px 20px;
+}
+button{
+    transition:all 0.3s ease 0s;
+    color: white;
+    background-color: rgb(173, 95, 246);
+}
+button:hover{
+    background-color: rgb(217, 179, 245);
+    color:rgb(115, 18, 205);
+    cursor: pointer;
+}
+
+.column2{
+    flex-basis: 50%;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  body::-webkit-scrollbar-track{
+    background-color:#060f19;
+  }
+
+  body::-webkit-scrollbar-thumb{
+    background-color:rgb(178, 112, 239);
+    border-radius:10px;
+  }
