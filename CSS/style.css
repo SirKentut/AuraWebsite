@@ -11,7 +11,7 @@ body{
 
 @media (prefers-color-scheme: dark) {
     body {
-      --bg-color: #292639;
+      --bg-color: #0d1b2a;
       --text-color: #ebeaf7;
       --switch-color:rgb(173, 95, 246);
       --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
@@ -79,7 +79,7 @@ li,a{
 .nav_content .toggle-group{
     margin-left: 30px;
     --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.268) inset;
-  --transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  --transition: all .45s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 
