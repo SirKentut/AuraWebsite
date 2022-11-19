@@ -1,10 +1,10 @@
 const btn = document.querySelector(".theme-switch input");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-// const theme=localStorage.getItem(document.documentElement);
-// if(theme){
-//   document.documentElement.classList.add(btn);
-// }
+const theme=localStorage.getItem(document.documentElement);
+if(theme){
+  document.documentElement.classList.add(btn);
+}
 
 
 btn.addEventListener("click", () => {
