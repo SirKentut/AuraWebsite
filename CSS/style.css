@@ -4,8 +4,6 @@
 }
 
 :root{
-
-
   /* Background Color->text->h1 */
   --primary-color:  #0d1b2a;
   --secondary-color:  #ebeaf7;
@@ -13,9 +11,6 @@
   --button-color:#ad5ff6;
   --card-color:#18304a;
   --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
-  
-  
-
 }
 
 body{
@@ -30,9 +25,6 @@ body{
   --button-color:#ff6b00;
   --card-color:#f0e8a0;
   --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
-
-   
- 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -234,6 +226,12 @@ button:hover{
     border-radius: 50px;
     border: 1px solid var(--secondary-color);
 }
+
+.column2 span{
+font-weight: 700;
+color: var(--tertiary-color);
+}
+
 
 body::-webkit-scrollbar {
     width: 5px;
