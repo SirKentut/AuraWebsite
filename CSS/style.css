@@ -11,6 +11,7 @@
   --secondary-color:  #ebeaf7;
   --tertiary-color: #98abc1; 
   --button-color:#ad5ff6;
+  --card-color:#18304a;
   --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
   
   
@@ -27,6 +28,7 @@ body{
   --secondary-color: #ff6b00;
   --tertiary-color: #cc5703;
   --button-color:#ff6b00;
+  --card-color:#f0e8a0;
   --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
 
    
@@ -35,14 +37,10 @@ body{
 
 @media (prefers-color-scheme: dark) {
     body {
-      --bg-color: #0d1b2a;
-      --text-color: #ebeaf7;
       --switch-color:var(--button-color);
       --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
     }
     .light_body {
-      --bg-color: #fff;
-      --text-color: #303030;
       --switch-color:var(--button-color);
       --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1) inset;
     }
@@ -292,6 +290,19 @@ body::-webkit-scrollbar {
 .team-col img p h3{
   position: absolute
 
+}
+
+.team-col .card{
+    position: relative;
+    width: 55%;
+    height: 100%;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+  
 }
 
 .team-col .role:hover{
