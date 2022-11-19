@@ -1,25 +1,49 @@
 *{
     padding:0;
     margin:0;
-    
+}
+
+:root{
+
+
+  /* Background Color->text->h1 */
+  --primary-color:  #0d1b2a;
+  --secondary-color:  #ebeaf7;
+  --tertiary-color: #98abc1; 
+  --button-color:#ad5ff6;
+  --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
+  
+  
 
 }
 
 body{
-    background-color:#0d1b2a;
+    background-color:var(--primary-color);
+}
+
+.light_body{
+  /* Background Color->text->h1 */
+  --primary-color:  #fffbd6;
+  --secondary-color: #ff6b00;
+  --tertiary-color: #cc5703;
+  --button-color:#ff6b00;
+  --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
+
+   
+ 
 }
 
 @media (prefers-color-scheme: dark) {
     body {
       --bg-color: #0d1b2a;
       --text-color: #ebeaf7;
-      --switch-color:rgb(173, 95, 246);
+      --switch-color:var(--button-color);
       --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5) inset;
     }
-    .light body {
+    .light_body {
       --bg-color: #fff;
       --text-color: #303030;
-      --switch-color:#292639;
+      --switch-color:var(--button-color);
       --switch-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1) inset;
     }
   }
@@ -28,11 +52,11 @@ body{
 }
 
 .container h1{
-    color:#98abc1;
+    color:var(--tertiary-color);
 }
 
 .container p{
-    color:hsl(212, 25%, 70%); 
+    color:var(--secondary-color); 
 }
 
 li,a{
@@ -55,7 +79,7 @@ li,a{
     align-items: center;
     justify-content: space-between;
     padding: 10px 5%;
-    color:white;
+    color:var(--secondary-color);
 }
 
 .logo{
@@ -150,7 +174,7 @@ li,a{
       transform: translatex(55px);
     }
   
-    .light .theme-switch .ball {
+    .light_body .theme-switch .ball {
       transform: translatex(0);
     }
   }
@@ -164,13 +188,18 @@ li,a{
     justify-content: center;
     padding: 250px 5%;
     grid-gap: 30px;
-    color:#c5d0dc;
+    color:var(--secondary-color);
 }
 
 .column1{
     flex-basis: 50%;
     justify-content: center;
 }
+
+.column1 h1{
+  color:var(--tertiary-color);
+}
+
 .btn_section{
     padding-top: 1rem;
 }
@@ -184,7 +213,8 @@ button{
     transition:all 0.5s ease 0s;
     color: white;
     font-size: 12px;
-    background-color: rgb(173, 95, 246);
+    background-color:var(--button-color);
+    border: none;
 }
 button:hover{
     background-color: rgb(217, 179, 245);
@@ -206,14 +236,14 @@ body::-webkit-scrollbar {
   }
 
   body::-webkit-scrollbar-thumb{
-    background-color:rgb(178, 112, 239);
+    background-color:var(--button-color);
     border-radius:10px;
   }
 
   @keyframes color-rotate{
     from{
         filter: hue-rotate(0deg);
-        color:rgb(173, 95, 246);
+        color:#ad5ff6;
     }
     to{
         filter: hue-rotate(360deg);
@@ -230,13 +260,14 @@ body::-webkit-scrollbar {
 
 .team-section{
     padding: 100px 5%;
-    color: #c5d0dc;
+    color: var(--secondary-color);
     position:center;
     align-items: center;
 }
 
 .team-section h1{
     text-align: center;
+    color: var(--tertiary-color);
     font-size: 2.5rem;
     font-weight: 900;
     margin-bottom: 50px;
@@ -256,6 +287,11 @@ body::-webkit-scrollbar {
     width: 25%;
     height: 25%;
     object-fit: cover;
+}
+
+.team-col img p h3{
+  position: absolute
+
 }
 
 .team-col .role:hover{

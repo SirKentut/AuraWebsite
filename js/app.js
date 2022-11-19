@@ -3,8 +3,10 @@ const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 btn.addEventListener("click", () => {
   if (prefersDarkScheme.matches) {
-    document.documentElement.classList.toggle("light");
+    document.documentElement.classList.toggle("light_body");
   } else {
     document.documentElement.classList.toggle("dark");
   }
 });
+
+
